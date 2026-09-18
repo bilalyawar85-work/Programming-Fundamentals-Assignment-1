@@ -2,10 +2,16 @@
 
 | Input | Process | Output |
 |---|---|---|
-| Number of requests `N` | Set current floor = 0 | Moving Up |
-| Requested floor | Compare requested floor with current floor | Moving Down |
-| Current floor | If requested floor > current floor, show Moving Up | Doors Opening |
-| | If requested floor < current floor, show Moving Down | |
-| | If requested floor = current floor, show Doors Opening | |
-| | Update current floor | |
-| | Repeat until all requests are completed | |
+| Season | Check the season and room type | Total Bill |
+| Room Type | Set the room rate according to the room type | |
+| Number of Nights | Peak Standard → Rate = 5000 | |
+| | Peak Deluxe → Rate = 8000 | |
+| | Peak Suite → Rate = 12000 | |
+| | Off-peak Standard → Rate = 3000 | |
+| | Off-peak Deluxe → Rate = 5000 | |
+| | Off-peak Suite → Rate = 8000 | |
+| | Calculate `cost = rate × nights` | |
+| | If nights > 7, calculate 15% discount | |
+| | Calculate `total = cost - discount` | |
+| | If nights ≤ 7, total = cost | |
+| | Display the total bill | |
